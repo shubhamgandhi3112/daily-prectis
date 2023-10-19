@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Registration info </title>
+    <style>
+        .s
+        {
+            /* input[type=submit]; */
+            background: purple;
+            width: 110px;
+            border-radius: 50px;
+           
+        }
+        button
+        {
+            background: lightblue;
+            background: #5ab54a;
+            width: 120px;
+            color: #fff;
+            border-radius: 50px;
+            border: none;
+            margin-left: 58px;
+            padding: 10px 10px;
+            
+        }
+        .info
+        {
+            background: #000;
+            border-radius: 10px;
+     }
+        .info b 
+        {
+            color: #fff;
+            margin-left: 65px;
+        }
+        input
+        {
+            background: #000000;
+            color: #fff;
+            border: none;
+            border-bottom: 1px solid gray;
+            width: 250px;
+
+        }
+        select
+        {
+            background: #000;
+            border: none;
+            color: gray;
+            width: 250px;
+            border-bottom: 1px solid gray;
+        }
+        img 
+        {
+            border-radius: 20px;
+            height: 355px;
+        }
+        table{
+            background: black;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <table cellspacing="0px" >
+    <form>   
+    <tr>
+        <td>
+            <img src="tree-736885__480.jpg" alt="" height="350px" width="360px">
+        </td>
+        <td class="info">
+            <b> Registration info </b><br></br>
+            <input type="text" placeholder="Name" required pattern="[a-z,A-Z]{2,5}" title="min 2 and max 5 letters....!"><br></br>
+            <input type="text" placeholder="Birthdate" onfocus="(this.type='date')" ><br></br>
+            <select aria-placeholder="Gender">
+                <option hidden> Gender </option>
+                <option> Male </option>
+                <option> Female </option>
+              </select><br></br>
+              <input type="" placeholder="Email"><br></br>
+              <input type="" placeholder="Phone"><br></br>
+              <!-- <input type="submit" value="Submit">
+              <h1 class="s" > Submit </h1> -->
+              <button type="button">Submit</button>
+        </td>
+
+    </form>
+</table>
+<!-- <input type="text" placeholder="Birthdate" onfocus="(this.type='date')" > -->
+</body>
+</html>

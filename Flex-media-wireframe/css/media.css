@@ -1,0 +1,24 @@
+
+@media(max-width:900px)
+{
+    .links .x{width: 50%;background: red;}
+    .subheader .x {width: 50%;background: green;}
+    .nav .links li  
+    {
+        /* display: block; */
+    }
+    .banner .x {width: 40%;}
+    .offer .x{width: 80%;}
+}
+
+@media(max-width:500px)
+{
+    .links .x{width: 100%;background: red;}
+    .subheader .x {width: 100%;background: green;}
+    .nav .links ul {
+        display: flex;
+        flex-direction: column;
+    }
+    .banner .x {width: 100%;}
+    .offer .x{width: 100%;}
+}

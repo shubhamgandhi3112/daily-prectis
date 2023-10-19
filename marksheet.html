@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marksheet</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .subject-input {
+            margin-bottom: 10px;
+        }
+        .total-label {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Marksheet</h2>
+        <form id="marksheetForm">
+            <div class="subject-input">
+                <label for="subject1">English : </label>
+                <label for="grade1">Grade:</label>
+                <input type="text" id="grade1" name="grade1" required>
+                <label for="marks1">Marks:</label>
+                <input type="number" id="marks1" name="marks1" required>
+            </div>
+
+            <div class="subject-input">
+                <label for="subject1">Hindi : </label>
+                <label for="grade1">Grade:</label>
+                <input type="text" id="grade2" name="grade2" required>
+                <label for="marks1">Marks:</label>
+                <input type="number" id="marks2" name="marks2" required>
+            </div>
+            
+            <button type="button" onclick="calculateTotal()">Calculate Total</button>
+            <p class="total-label">Total Marks: <span id="total"></span></p>
+        </form>
+    </div>
+
+    <script>
+        function calculateTotal() {
+            let marks1 = parseFloat(document.getElementById("marks1").value) || 0;
+            let marks2 = parseFloat(document.getElementById("marks2").value) || 0;
+            
+
+            let totalMarks = marks1 + marks2;
+
+            document.getElementById("total").textContent = totalMarks;
+        }
+    </script>
+</body>
+</html>

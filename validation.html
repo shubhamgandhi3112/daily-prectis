@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Normal Form Validation </title>
+</head>
+<body>
+    <input type="text" name="first" id="first" onblur="handleValidation()"> <span id="error1"></span><br><br>
+    
+    <label for="email">Email:</label>
+    <input type="email" name="email" id="email" onblur="validateEmail()">
+    <span id="errorEmail"></span><br><br>
+
+    <label for="password">Password:</label>
+    <input type="password" name="password" id="password" onblur="validatePassword()">
+    <span id="errorPassword"></span><br><br>
+
+    <label for="mobile">Mobile Number:</label>
+    <input type="text" name="mobile" id="mobile" onblur="validateMobile()">
+    <span id="errorMobile"></span><br><br>
+
+    <script>
+        var b = 2;
+        function handleValidation(){
+            var a = document.getElementById("first").value
+            console.log(a);
+            if (a == "") {
+                document.getElementById("error1").innerText = "This field is required!"
+               
+                console.log("Empty");
+            } else {
+                document.getElementById("error1").innerText = ""
+                console.log("has some value");
+
+                
+            }
+            
+        }
+
+        function validateEmail() {
+            var email = document.getElementById("email").value;
+            
+
+            if (email === "") {
+                document.getElementById("errorEmail").innerText = "This field is required!";
+            } 
+               else {
+                document.getElementById("errorEmail").innerText = "";
+            }
+        }
+
+        function validatePassword() {
+            var password = document.getElementById("password").value;
+
+            if (password === "") {
+                document.getElementById("errorPassword").innerText = "This field is required!";
+            } else {
+                document.getElementById("errorPassword").innerText = "";
+            }
+        }
+
+        function validateMobile() {
+            var mobile = document.getElementById("mobile").value;
+            
+
+            if (mobile === "") {
+                document.getElementById("errorMobile").innerText = "This field is required!";
+            } 
+             else {
+                document.getElementById("errorMobile").innerText = "";
+            }
+        }
+
+    
+    </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    Name: <input type="text" name="" id="inp"><br><br>
+    Mobile: <input type="text" name="" id="mb"><br><br>
+    <input type="submit" onclick="test()">
+    
+
+    <script>
+
+        input = document.getElementById('inp');
+        mobile = document.getElementById('mb');
+
+        function test()
+        {
+            console.log(input.value)
+
+            if(input.value == '')
+            {
+                alert('Name required.!');
+                return false;
+            }
+
+            if(mobile.value == '')
+            {
+                alert('Mobile required.!');
+            }
+
+        }
+       
+       
+    </script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>document</title>
+    <style>
+      .box {
+        width: 800px;
+        margin: 0 auto;
+        border: 1px solid blue;
+        padding: 20px;
+      }
+      input {
+        margin: 10px 0;
+      }
+      button {
+        margin: 10px 0; 
+        padding: 10px 30px;
+        background-color: rgb(128, 0, 17);
+        color: rgb(140, 240, 213);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <input type="text" name="first" id="first" />
+      <br />
+      <input type="text" name="second" id="second" />
+      <br />
+      <button onclick="sum()">Click Me</button>
+    </div>
+
+    <script>
+      function sum() {
+        let a = parseFloat(document.getElementById("first").value);
+        let b = parseFloat(document.getElementById("second").value);
+        let total = a + b; 
+        alert("sum is: " + total);
+      }
+    </script>
+  </body>
+</html>
